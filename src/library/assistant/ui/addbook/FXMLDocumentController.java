@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import library.assistant.database.DatabaseHandler;
 
 /**
  *
@@ -30,14 +31,11 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private JFXButton cancelButton;
     
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
-    
+    DatabaseHandler databaseHandler;
+        
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        databaseHandler = new DatabaseHandler();
     }    
 
     @FXML

@@ -21,7 +21,7 @@ public final class DatabaseHandler {
     private static DatabaseHandler handler;
     
     // Derby database is different because it can be used just as a folder, so you have the ability to just copy the folder and it will work on another computer
-    private static final String DB_URL = "djbc:derby:database/library2;create=true";
+    private static final String DB_URL = "jdbc:derby:database/library2;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
     
