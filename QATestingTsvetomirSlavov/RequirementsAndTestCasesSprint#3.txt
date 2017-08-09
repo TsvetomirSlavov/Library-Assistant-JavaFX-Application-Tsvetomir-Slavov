@@ -1,0 +1,15 @@
+Finished section #3, developed sprint backlog item -  Adding a book to the database functionality. Agile incremental approach - building a small working functionality. See the list of requirements to be tested.
+
+Testable Requirements, Release notes: 
+
+1. If text is typed in all the fields when clicking Save button add a record with the new book to the database
+
+2. If there is even one empty field, do not insert the record to the database when the Save button is clicked. Display blocking alert to the user with the message "Please type in all fields".
+
+3. Create a new derby database folder in the application folder if there is not a database present at the time of starting the application.
+
+4. Implement methods to initialize the database, query the database, execute CRUD operations on the database.
+
+5. If all the fields are entered and the user clicks the Save button the record should be inserted in the database and a information dialog with a message "Success" should appear for the user to click OK.
+
+6. If there is a system problem with inserting the record in the database a error message dialog should appear with the message "Failed to insert the reocrd in the database"
