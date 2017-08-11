@@ -21,7 +21,7 @@ import library.assistant.database.DatabaseHandler;
  *
  * @author cccce
  */
-public class FXMLDocumentController implements Initializable {
+public class BookAddController implements Initializable {
 
     private Label label;
     @FXML
@@ -106,7 +106,7 @@ public class FXMLDocumentController implements Initializable {
                 System.out.println(titlex);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BookAddController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
