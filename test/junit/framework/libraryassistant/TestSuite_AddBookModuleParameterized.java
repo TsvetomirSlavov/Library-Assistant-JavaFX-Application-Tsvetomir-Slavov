@@ -21,7 +21,7 @@ import org.junit.runners.Parameterized;
  * @author cccce
  */
 @RunWith(Parameterized.class)
-public class TestSuite_AddBookModule extends TestRules {
+public class TestSuite_AddBookModuleParameterized extends TestRules {
 
     @Parameterized.Parameter
     public JSONObject json;
@@ -32,7 +32,7 @@ public class TestSuite_AddBookModule extends TestRules {
     }
 
     @Test
-    public void testDatabaseInsertionAddBookHappyPathBoundaries() {
+    public void testDatabaseInsertionAddBookPositiveBoundaries() {
 
         databaseHandler.execAction("INSERT INTO BOOK VALUES ("
                 + "'" + json.get("bookID") + "',"
@@ -59,6 +59,11 @@ public class TestSuite_AddBookModule extends TestRules {
         String stringResult = result.toString();
 
         Assert.assertTrue(stringResult.contains((CharSequence) json.get("bookID")));
+    }
+    
+    @Test
+    public void testDatabaseInsertionAddBookNegativeBoundaries() {
+        
     }
 
     @After

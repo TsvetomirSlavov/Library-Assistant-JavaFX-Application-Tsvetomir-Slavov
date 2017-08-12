@@ -24,24 +24,25 @@ public class TestRules {
     
     @BeforeClass
     public static void beforeClass(){
-        System.out.println("Before class");
+        System.out.println("BeforeClass in TestRules");
+        System.out.println("BeforeClass in TestRules initializing DatabaseHandler databaseHandler static object.");
         databaseHandler = new DatabaseHandler();
     }
     
     @Before
     public void before(){
-        System.out.println("Before");
+        System.out.println("Before in TestRules");
     }
     
     @After
     public void after(){
-        System.out.println("After");
+        System.out.println("After in TestRules");
 
     }
     
     @AfterClass 
     public static void afterClass(){
-        System.out.println("After class");
+        System.out.println("AfterClass in Test Rules");
     }
     
     @Rule

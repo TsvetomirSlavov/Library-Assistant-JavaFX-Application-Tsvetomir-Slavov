@@ -35,7 +35,7 @@ public class TestSuite_AddBookModuleNoParameterization extends TestRules{
  
         // use databaseHandler initialized in @BeforeClass in parent TestRules
         databaseHandler.execAction("INSERT INTO BOOK VALUES ("
-                + "'99999',"
+                + "'9999999',"
                 + "'Seven Seventy Seven',"
                 + "'Pavlov',"
                 + "'Michurin Publishing',"
@@ -58,7 +58,7 @@ public class TestSuite_AddBookModuleNoParameterization extends TestRules{
         String stringResult = result.toString();
         System.out.println("string Result: " + stringResult);
 
-        Assert.assertTrue(stringResult.contains("99999"));
+        Assert.assertTrue(stringResult.contains("9999999"));
     }
 
 //    @After

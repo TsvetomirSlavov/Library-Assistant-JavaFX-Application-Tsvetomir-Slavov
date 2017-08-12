@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    TestSuite_AddBookModule.class, 
+    TestSuite_AddBookModuleParameterized.class, 
 //    TestSuite_AddMemberModule.class,
 //    TestSuite_ListBookModule.class
 })
