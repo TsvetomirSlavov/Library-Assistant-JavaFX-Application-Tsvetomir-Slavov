@@ -24,30 +24,23 @@ import org.junit.runners.Parameterized;
  * @author cccce
  */
 
-public class TestSuite_AddBookModuleNoParameterization  {
+public class TestSuite_AddBookModuleNoParameterization extends TestRules{
 
 
 
     @Test
     public void testDatabaseInsertionAddBookHappyPathBoundaries() {
         
-//        LibraryAssistant  la = new LibraryAssistant();
-//        try {
-//            la.init();
-//        } catch (Exception ex) {
-//            Logger.getLogger(TestSuite_AddBookModuleNoParameterization.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-        
-        DatabaseHandler databaseHandler = new DatabaseHandler();
-
+ //       DatabaseHandler databaseHandler = new DatabaseHandler();
+ 
+        // use databaseHandler initialized in @BeforeClass in parent TestRules
         databaseHandler.execAction("INSERT INTO BOOK VALUES ("
-                + "'9999',"
+                + "'99999',"
                 + "'Seven Seventy Seven',"
                 + "'Pavlov',"
                 + "'Michurin Publishing',"
                 + "" + true + ""
                 + ")");
-
         
         StringBuffer result = new StringBuffer("");
         ResultSet rs = databaseHandler.execQuery("SELECT id FROM BOOK");
@@ -65,7 +58,7 @@ public class TestSuite_AddBookModuleNoParameterization  {
         String stringResult = result.toString();
         System.out.println("string Result: " + stringResult);
 
-        Assert.assertTrue(stringResult.contains("9999"));
+        Assert.assertTrue(stringResult.contains("99999"));
     }
 
 //    @After
