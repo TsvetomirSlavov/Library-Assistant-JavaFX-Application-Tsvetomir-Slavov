@@ -41,7 +41,7 @@ public class TestSuite_AddBookModuleNoParameterization  {
         DatabaseHandler databaseHandler = new DatabaseHandler();
 
         databaseHandler.execAction("INSERT INTO BOOK VALUES ("
-                + "'777',"
+                + "'9999',"
                 + "'Seven Seventy Seven',"
                 + "'Pavlov',"
                 + "'Michurin Publishing',"
@@ -63,13 +63,14 @@ public class TestSuite_AddBookModuleNoParameterization  {
         System.out.println("All book ids in the database: " + result);
         
         String stringResult = result.toString();
+        System.out.println("string Result: " + stringResult);
 
-        Assert.assertTrue(stringResult.contains("777"));
+        Assert.assertTrue(stringResult.contains("9999"));
     }
 
-    @After
-    public void deleteTheBookFromTheDatabase() {
-        databaseHandler.execAction("DELETE FROM BOOK WHERE id='777'");
-    }
+//    @After
+//    public void deleteTheBookFromTheDatabase() {
+//        databaseHandler.execAction("DELETE FROM BOOK WHERE id = '888'" + ";");
+//    }
 
 }
