@@ -16,10 +16,10 @@ import org.json.simple.parser.ParseException;
  */
 public class HelperParameterizedTests {
     
-    public static Collection data() throws IOException, ParseException {
+    public static Collection data(String jsonFileLocation) throws IOException, ParseException {
         ArrayList<Object[]> data = new ArrayList<Object[]>();
         JSONParser parser = new JSONParser();
-        JSONObject rawJson = (JSONObject) parser.parse(new FileReader("testParameterization.json"));
+        JSONObject rawJson = (JSONObject) parser.parse(new FileReader(jsonFileLocation));
         Object[] keys = rawJson.keySet().toArray();
         for(Object key : keys){
             JSONObject json = (JSONObject) rawJson.get(key);

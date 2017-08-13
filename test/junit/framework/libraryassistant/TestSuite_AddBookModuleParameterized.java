@@ -28,7 +28,7 @@ public class TestSuite_AddBookModuleParameterized extends TestRules {
 
     @Parameterized.Parameters
     public static Collection data() throws IOException, ParseException {
-        return HelperParameterizedTests.data();
+        return HelperParameterizedTests.data("test\\junit\\framework\\libraryassistant\\testData\\TestSuite_AddBookModuleParameterized\\testDatabaseInsertionAddBookPositiveBoundaries.json");
     }
 
     @Test
@@ -67,7 +67,8 @@ public class TestSuite_AddBookModuleParameterized extends TestRules {
     }
 
     @After
-    public void deleteTheBookFromTheDatabase() {
+    public void cleanUpDeleteTheBookFromTheDatabase() {
+        System.out.println("cleaning up the database, deleting book: " + json.get("bookID"));
         databaseHandler.execAction("DELETE FROM BOOK WHERE id='" + json.get("bookID") + "'");
     }
 
