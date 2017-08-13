@@ -14,17 +14,24 @@ import javax.swing.JOptionPane;
  */
 public final class DatabaseHandler {
 
-    private static DatabaseHandler handler;
+    private static DatabaseHandler handler = null;
 
     // Derby database is different because it can be used just as a folder, so you have the ability to just copy the folder and it will work on another computer
     private static final String DB_URL = "jdbc:derby:database/library2;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
 
-    public DatabaseHandler() {
+    private DatabaseHandler() {
         createConnection();
         setupBookTable();
         setupMemberTable();
+    }
+    
+    public static DatabaseHandler getInstance(){        
+        if(handler == null){            
+            handler = new DatabaseHandler();            
+        }
+        return handler;        
     }
 
     /**

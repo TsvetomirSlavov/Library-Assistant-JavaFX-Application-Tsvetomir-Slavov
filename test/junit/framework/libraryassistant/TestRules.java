@@ -26,7 +26,7 @@ public class TestRules {
     public static void beforeClass(){
         System.out.println("BeforeClass in TestRules");
         System.out.println("BeforeClass in TestRules initializing DatabaseHandler databaseHandler static object.");
-        databaseHandler = new DatabaseHandler();
+        databaseHandler = DatabaseHandler.getInstance();
     }
     
     @Before
