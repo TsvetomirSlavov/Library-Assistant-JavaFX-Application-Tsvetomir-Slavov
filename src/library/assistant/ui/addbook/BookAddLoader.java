@@ -11,11 +11,11 @@ import javafx.stage.Stage;
  *
  * @author cccce
  */
-public class LibraryAssistant extends Application {
+public class BookAddLoader extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("add_book.fxml"));
         
         Scene scene = new Scene(root);
         

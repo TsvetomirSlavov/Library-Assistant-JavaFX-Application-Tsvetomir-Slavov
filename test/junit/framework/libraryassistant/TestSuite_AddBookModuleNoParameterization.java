@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 import static junit.framework.libraryassistant.TestRules.databaseHandler;
 import library.assistant.database.DatabaseHandler;
 import library.assistant.ui.addbook.BookAddController;
-import library.assistant.ui.addbook.LibraryAssistant;
+import library.assistant.ui.addbook.BookAddLoader;
 import library.assistant.ui.listbook.BookListController;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;

@@ -46,7 +46,7 @@ public class BookAddController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         databaseHandler = DatabaseHandler.getInstance();
         
-        checkData();
+       
     }
 
     @FXML

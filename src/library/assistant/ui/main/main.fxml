@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -20,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.assistant.ui.main.MainController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
@@ -47,7 +48,7 @@
          <right>
             <VBox prefHeight="424.0" prefWidth="154.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="90.0" prefWidth="173.0" text="Add Member">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddMember" prefHeight="90.0" prefWidth="173.0" text="Add Member">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -56,7 +57,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="90.0" prefWidth="173.0" text="List Members">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadMemberTable" prefHeight="90.0" prefWidth="173.0" text="View Members">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -65,7 +66,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="90.0" prefWidth="173.0" text="Add Book">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadAddBook" prefHeight="90.0" prefWidth="173.0" text="Add Book">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -74,7 +75,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="90.0" prefWidth="173.0" text="View Books">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#loadBookTable" prefHeight="90.0" prefWidth="173.0" text="View Books">
                      <graphic>
                         <ImageView fitHeight="41.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -164,11 +165,7 @@
                                     </HBox>
                                     <HBox alignment="CENTER" opacity="0.85" prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <Button mnemonicParsing="false" text="Issue">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Button>
+                                          <JFXButton styleClass="setup-button" stylesheets="@main.css" text="Issue" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -199,22 +196,16 @@
                                  <bottom>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <Button mnemonicParsing="false" text="Renew">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
+                                          <JFXButton styleClass="setup-button" stylesheets="@main.css" text="Renew">
                                              <HBox.margin>
-                                                <Insets right="5.0" />
+                                                <Insets left="10.0" right="10.0" />
                                              </HBox.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" text="Submission">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="252.0" layoutY="48.0" styleClass="setup-button" stylesheets="@main.css" text="Submission">
                                              <HBox.margin>
-                                                <Insets left="5.0" />
+                                                <Insets left="10.0" right="10.0" />
                                              </HBox.margin>
-                                          </Button>
+                                          </JFXButton>
                                        </children>
                                     </HBox>
                                  </bottom>
